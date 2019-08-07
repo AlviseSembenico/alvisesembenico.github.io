@@ -71,8 +71,8 @@
 									<li data-tooltip="resume" data-position="top">
 										<a href="#resume" class="icon-r fas fa-address-book"></a>
 									</li>
-									<!-- <li data-tooltip="portfolio" data-position="top">
-										<a href="#portfolio" class="icon-p fas fa-briefcase"></a>
+									<!-- <li data-tooltip="projects" data-position="top">
+										<a href="#portfolio" class="icon-p fas fa-code"></a>
 									</li> -->
 									<li data-tooltip="blog" data-position="top">
 										<a href="#blog" class="icon-b fas fa-receipt"></a>
@@ -137,7 +137,7 @@
 												<div class="row">
 													<div class="col-lg-3 col-sm-4">
 														<div class="photo">
-															<img alt="" src="img/user-photo.jpg">
+															<img alt="" src="img/mlprofile.jpg">
 														</div>
 													</div>
 													<div class="col-lg-9 col-sm-8">
@@ -1022,60 +1022,18 @@
 
 	<!-- Hotjar Tracking Code for alvisesembenico.com -->
 	<script>
-		(function (h, o, t, j, a, r) {
-			h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-			h._hjSettings = { hjid: 1430566, hjsv: 6 };
-			a = o.getElementsByTagName('head')[0];
-			r = o.createElement('script'); r.async = 1;
-			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-			a.appendChild(r);
-		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+		// (function (h, o, t, j, a, r) {
+		// 	h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+		// 	h._hjSettings = { hjid: 1430566, hjsv: 6 };
+		// 	a = o.getElementsByTagName('head')[0];
+		// 	r = o.createElement('script'); r.async = 1;
+		// 	r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+		// 	a.appendChild(r);
+		// })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 	</script>
 
 	<script>
 
-		String.prototype.hashCode = function () {
-			var hash = 0, i, chr;
-			if (this.length === 0) return hash;
-			for (i = 0; i < this.length; i++) {
-				chr = this.charCodeAt(i);
-				hash = ((hash << 5) - hash) + chr;
-				hash |= 0; // Convert to 32bit integer
-			}
-			return hash;
-		};
-
-		var dict = new Object();
-		console.log("ready!");
-		var _hash = undefined
-		function rel() {
-			var pathname = 'file://' + window.location.pathname
-			var resources = window.performance.getEntriesByType("resource");
-			// resources.forEach(function (resource) {
-			console.log(pathname)
-			fetch(pathname)
-				.then(r => {
-					return r.text()
-				})
-				.then(r => {
-					var h = r.hashCode();
-					console.log(h);
-					console.log(_hash);
-					if (_hash == undefined)
-						_hash = h;
-					else if (_hash != h) {
-						location.reload(true);
-					}
-				})
-				.catch(r => {
-					console.log(r)
-				})
-
-			// });
-			setTimeout(rel, 2000);
-		}
-
-		rel()
 
 	</script>
 
