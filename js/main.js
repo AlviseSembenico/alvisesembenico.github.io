@@ -14,7 +14,7 @@ Table of Content
 	2. Sound Start
 	3. Isotope Portfolio Setup
 	4. Blogs Masonry Setup
-	5. Glitch Effect
+	5. YouTube Video
 	6. Active Current Link
 	7. Mobile Toggle Click Setup
 	8. Testimonials OwlCarousel
@@ -24,7 +24,7 @@ Table of Content
 	12. Portfolio Video Link
 	13. Blog Video Link
 	14. Validate Contact Form
-	15. YouTube Video
+	15. Glitch Effect
 	16. Google Map
 
 ----------------------------------- */
@@ -92,26 +92,15 @@ $(window).on('load', function() {
 	----------------------------------- */
     $('.blog-masonry').isotope({ layoutMode: 'moduloColumns' });
 	
+	/* -----------------------------------
+	      	5. YouTube Video
+	----------------------------------- */
+	$("#play-video").YTPlayer();
+	
 });
 
 $(document).ready(function() {
     "use strict";
-	
-	/* -----------------------------------
-	      	5. Glitch Effect
-	----------------------------------- */
-	
-	$(".glitch").mgGlitch({
-		destroy: false,
-		glitch: true,
-		scale: true,
-		blend: true,
-		blendModeType: "hue",
-		glitch1TimeMin: 200,
-		glitch1TimeMax: 400,
-		glitch2TimeMin: 10,
-		glitch2TimeMax: 100
-	});
 	
 	/* -----------------------------------
 			6. Active Current Link
@@ -251,9 +240,20 @@ $(document).ready(function() {
     }
 	
 	/* -----------------------------------
-	      	15. YouTube Video
+	      	5. Glitch Effect
 	----------------------------------- */
-	$("#play-video").YTPlayer();
+	
+	$(".glitch").mgGlitch({
+		destroy: false,
+		glitch: true,
+		scale: true,
+		blend: true,
+		blendModeType: "hue",
+		glitch1TimeMin: 200,
+		glitch1TimeMax: 400,
+		glitch2TimeMin: 10,
+		glitch2TimeMax: 100
+	});
 	
 	/* Google Map Setup */
     if($('#map').length) {
