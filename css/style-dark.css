@@ -690,6 +690,7 @@ blockquote span img {
 .pt-about, 
 .pt-resume, 
 .pt-portfolio, 
+.pt-books,
 .pt-blog,
 .pt-contact {
 	background-color: #0e0f10;
@@ -698,6 +699,7 @@ blockquote span img {
 #about:target .pt-about,
 #resume:target .pt-resume,
 #portfolio:target .pt-portfolio,
+#books:target .pt-books,
 #blog:target .pt-blog,
 #contact:target .pt-contact {
 	transition-delay: .3s;
@@ -1697,6 +1699,164 @@ blockquote span img {
 	transform: translateX(0%);
 }
 
+
+/* ---------------------------------
+		7. Books Section
+--------------------------------- */
+/* books Filter */
+.pt-books .books-filter {
+	text-align: center;
+}
+
+.pt- .books-filter ul {
+	display: inline-block;
+	margin: 0;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, .1);
+	box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, .1);
+}
+
+.pt-books .books-filter ul li {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 10px 25px;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+ 
+.pt-books .books-filter ul li.active {
+	color: #0e0f10;
+	background-color: #fff;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+/* books Item */
+.pt-books .books-items .item figure {
+	position: relative;
+	cursor: pointer;
+	background-color: #0e0f10;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.pt-books .books-items .item figure img {
+	opacity: 1;
+	width: 100%;
+	height: 100%; 
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+.pt-books .books-items .item figure figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 100%;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    padding: 30px;
+    color: #fff;
+}
+
+.pt-books .books-items .item figure figcaption a {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.pt-books .books-items .item figure figcaption h3 {
+	opacity: 0;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+  
+.pt-books .books-items .item figure figcaption p {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin: 20px;
+	font-size: 14px;
+	padding-left: 15px;
+	opacity: 0;
+	-webkit-transform: translateX(-200%);
+	-ms-transform: translateX(-200%);
+	transform: translateX(-200%);
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+.pt-books .books-items .item figure figcaption p:before {
+	content: "\f292";
+	font-family: "Font Awesome 5 Free";
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+	font-weight: 900;
+}
+ 
+.pt-books .books-items .item figure figcaption i {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 20px;
+	font-size: 24px;
+	opacity: 0;
+	-webkit-transform: translateX(200%);
+	-ms-transform: translateX(200%);
+	transform: translateX(200%);
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+ 
+.pt-books .books-items .item figure:hover img {
+	opacity: 0.25;
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1); 
+}
+ 
+.pt-books .books-items .item figure:hover h3 {
+	opacity: 1;
+}
+ 
+.pt-books .books-items .item figure:hover p {
+	opacity: 1; 
+	-webkit-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	transform: translateX(0%);
+}
+ 
+.pt-books .books-items .item figure:hover i {
+	opacity: 1; 
+	-webkit-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	transform: translateX(0%);
+}
+
 /* ---------------------------------
 		8. Blog Section
 --------------------------------- */
@@ -2363,6 +2523,7 @@ blockquote span img {
 	#about:target .pt-about,
 	#resume:target .pt-resume,
 	#portfolio:target .pt-portfolio,
+	#books:target .pt-books,
 	#blog:target .pt-blog,
 	#contact:target .pt-contact {
 		-webkit-transform: translateX(0);
@@ -2462,6 +2623,10 @@ blockquote span img {
 		margin: 0 auto 40px;
 	}
 	.pt-portfolio .portfolio-filter ul {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	.pt-books .books-filter ul {
 		-webkit-box-shadow: none;
 		box-shadow: none;
 	}

@@ -63,6 +63,30 @@ $(window).on('load', function () {
 	/* -----------------------------------
 			3. Isotope Portfolio Setup
 	----------------------------------- */
+    if ($('.books-items').length) {
+        var $elements = $(".books-items"),
+            $filters = $('.books-filter ul li');
+        $elements.isotope();
+
+        $filters.on('click', function () {
+            $filters.removeClass('active');
+            $(this).addClass('active');
+            var selector = $(this).data('filter');
+            $(".books-items").isotope({
+                filter: selector,
+                hiddenStyle: {
+                    transform: 'scale(.2) skew(30deg)',
+                    opacity: 0
+                },
+                visibleStyle: {
+                    transform: 'scale(1) skew(0deg)',
+                    opacity: 1,
+                },
+                transitionDuration: '.5s'
+            });
+        });
+    }
+
     if ($('.portfolio-items').length) {
         var $elements = $(".portfolio-items"),
             $filters = $('.portfolio-filter ul li');
@@ -86,6 +110,7 @@ $(window).on('load', function () {
             });
         });
     }
+
 
 	/* -----------------------------------
 			4. Blogs Masonry Setup
@@ -171,6 +196,13 @@ $(document).ready(function () {
         reverse: true
     });
 
+    $('.pt-books .books-items .item figure').tilt({
+        maxTilt: 3,
+        glare: true,
+        maxGlare: .6,
+        reverse: true
+    });
+
 	/* -----------------------------------
 	      11. Portfolio Image Link
 	----------------------------------- */
@@ -178,10 +210,18 @@ $(document).ready(function () {
         type: "image"
     });
 
+    $(".books-items .image-link").magnificPopup({
+        type: "image"
+    });
+
 	/* -----------------------------------
 	      12. Portfolio Video Link
 	----------------------------------- */
     $(".portfolio-items .video-link").magnificPopup({
+        type: "iframe"
+    });
+
+    $(".books-items .video-link").magnificPopup({
         type: "iframe"
     });
 
