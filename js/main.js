@@ -64,12 +64,12 @@ $(window).on('load', function () {
 			3. Isotope Portfolio Setup
 	----------------------------------- */
     if ($('.books-items').length) {
-        var $elements = $(".books-items"),
-            $filters = $('.books-filter ul li');
-        $elements.isotope();
+        var $book_elements = $(".books-items"),
+            $book_filters = $('.books-filter ul li');
+        $book_elements.isotope();
 
-        $filters.on('click', function () {
-            $filters.removeClass('active');
+        $book_filters.on('click', function () {
+            $book_filters.removeClass('active');
             $(this).addClass('active');
             var selector = $(this).data('filter');
             $(".books-items").isotope({
