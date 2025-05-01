@@ -33,6 +33,7 @@ Table of Content
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
 
+  
 * {
 	margin: 0;
 	padding: 0;
@@ -1097,6 +1098,25 @@ blockquote span img {
 }
 
 /* My Interests */
+
+.inter-icon {
+	display: flex;
+	align-items: center;
+	gap: 12px; /* Adds space between icon and text */
+}
+
+.inter-icon i {
+	font-size: 24px;
+	color: #98ecb0; /* Match the green icon color */
+	min-width: 24px;
+}
+
+.desc-inter h6,
+	.desc-inter p {
+		margin: 0;
+		white-space: nowrap; /* Optional: prevents line wrap */
+}
+
 .pt-about .inter-icon {
 	position: relative;
 	background: #0e0f10;
